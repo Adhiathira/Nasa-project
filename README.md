@@ -252,7 +252,7 @@ For detailed technical specifications, see:
 
 
 
-## 🎨 UI/UX Features
+## UI/UX Features
 
 - **Cosmic Background**: Black (#000000) with faint blue glow
 - **3D Nodes**: Spheres with subtle outer glow
@@ -261,7 +261,7 @@ For detailed technical specifications, see:
 - **Detail Panel**: Frosted-glass card with paper information
 - **Chat Interface**: Clean two-column message layout
 
-## 🚨 Known Limitations
+## Limitations
 
 - **Desktop Only**: Not optimized for mobile devices
 - **LLM Quality**: TinyLlama (1.1B parameters) has limited capabilities compared to larger models
@@ -272,6 +272,4 @@ For detailed technical specifications, see:
 
 This is a NASA hackathon project for demonstration purposes.
 
-## 🤝 Contributing
 
-This is an MVP built for rapid prototyping. For development guidelines and contribution process, see [CLAUDE.md](./CLAUDE.md).
