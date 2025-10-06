@@ -26,9 +26,7 @@ This isn't just search — it's **collaborative knowledge discovery**.
 
 **Watch the full product demonstration:**
 
-
-https://github.com/user-attachments/assets/eafe1e7b-f74e-4d6e-a591-f29dd271fe60
-
+https://github.com/user-attachments/assets/863de073-319d-4730-ad9d-0553ebc41687
 
 ## 🚀 Features
 
