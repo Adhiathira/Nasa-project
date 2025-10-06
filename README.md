@@ -2,7 +2,7 @@
 
 An interactive 3D visualization platform for exploring NASA research papers and their relationships. Built with React, Three.js, and a RAG-powered backend.
 
-## 💡 Vision: Human-Machine Collaboration in Research
+## Vision: Human-Machine Collaboration in Research
 
 We believe humans and machines should work together in the future. Currently, we have two extremes of search:
 
@@ -28,7 +28,7 @@ This isn't just search — it's **collaborative knowledge discovery**.
 
 https://github.com/user-attachments/assets/863de073-319d-4730-ad9d-0553ebc41687
 
-## 🚀 Features
+## Features
 
 - **Interactive 3D Graph**: Visualize research papers as 3D nodes in space using `3d-force-graph`
 - **Semantic Search**: Search NASA research papers using natural language queries
@@ -37,7 +37,7 @@ https://github.com/user-attachments/assets/863de073-319d-4730-ad9d-0553ebc41687
 - **Intelligent Connections**: Edge thickness represents similarity scores between papers
 - **Color-Coded Expansions**: Each expansion session gets a unique color for easy tracking
 
-## 🏗️ Architecture
+## Architecture
 
 ### Frontend
 - **Framework**: React + TypeScript + Vite
@@ -53,7 +53,7 @@ https://github.com/user-attachments/assets/863de073-319d-4730-ad9d-0553ebc41687
 - **LLM**: TinyLlama-1.1B-Chat-v1.0 (fp16 on MPS for macOS)
 - **RAG Pipeline**: LangChain for retrieval and generation
 
-## 📦 Deployment
+## Deployment
 
 ### Prerequisites
 - **Frontend**: Node.js 22+ and npm
@@ -118,7 +118,7 @@ The backend uses configuration from `actual-backend/scripts/config.py`. Default 
 - Embedding Model: `sentence-transformers/all-MiniLM-L6-v2`
 - LLM Model: `TinyLlama/TinyLlama-1.1B-Chat-v1.0`
 
-## 🔌 API Endpoints
+## API Endpoints
 
 The backend provides three main endpoints:
 
@@ -200,7 +200,7 @@ Chat about a specific paper using RAG.
 }
 ```
 
-## 🎯 Usage Flow
+##  Usage Flow
 
 1. **Search**: Enter a research topic (e.g., "photosynthesis", "Mars exploration")
 2. **Explore 3D Graph**:
@@ -211,31 +211,10 @@ Chat about a specific paper using RAG.
 4. **Chat**: Click "Chat" to ask questions about a specific paper
 5. **Reset**: Click the reset button to start a new search
 
-## 📚 Project Structure
 
-```
-nasa-hack/
-├── frontend/                    # React frontend application
-│   ├── src/
-│   │   ├── components/         # React components
-│   │   ├── store/              # Zustand state management
-│   │   ├── types/              # TypeScript interfaces
-│   │   └── services/           # API integration
-│   ├── Dockerfile              # Frontend container config
-│   └── docker-compose.yml      # Docker orchestration
-├── actual-backend/             # Python RAG backend
-│   ├── scripts/
-│   │   ├── serve_adapted.py    # Main API server
-│   │   ├── build_index.py      # ChromaDB indexing
-│   │   └── config.py           # Configuration
-│   ├── chroma_nasa/            # Vector database
-│   ├── data/                   # Research papers dataset
-│   └── requirements.txt        # Python dependencies
-├── project-documentation/      # Technical documentation
-└── videos/                     # Product demo videos
-```
 
-## 🛠️ Development
+
+## Development
 
 ### Backend Data Indexing
 If you need to rebuild the ChromaDB index with new papers:
@@ -261,7 +240,7 @@ source .venv/bin/activate
 API_PORT=8000 python scripts/serve_adapted.py
 ```
 
-## 📝 Technical Documentation
+## Technical Documentation
 
 For detailed technical specifications, see:
 - [Project Overview](./project-documentation/project-overview.md)
@@ -269,13 +248,9 @@ For detailed technical specifications, see:
 - [Architecture](./project-documentation/architecture.md)
 - [Backend Adaptation Summary](./actual-backend/BACKEND_ADAPTATION_SUMMARY.md)
 
-## 🐛 Recent Fixes
 
-- ✅ Fixed `/api/search` endpoint to return clean summaries (no prompt text)
-- ✅ Fixed `/api/chat` endpoint to return clean responses (no internal prompts)
-- ✅ All endpoints now fully compliant with frontend TypeScript interfaces
 
-See [CHAT_FIX_SUMMARY.md](./CHAT_FIX_SUMMARY.md) and [FIX_SUMMARY.md](./FIX_SUMMARY.md) for details.
+
 
 ## 🎨 UI/UX Features
 
@@ -293,7 +268,7 @@ See [CHAT_FIX_SUMMARY.md](./CHAT_FIX_SUMMARY.md) and [FIX_SUMMARY.md](./FIX_SUMM
 - **No Authentication**: Demo version, no user accounts or persistence
 - **Local Only**: Not configured for production deployment
 
-## 📄 License
+
 
 This is a NASA hackathon project for demonstration purposes.
 
