@@ -246,7 +246,7 @@ For detailed technical specifications, see:
 - [Project Overview](./project-documentation/project-overview.md)
 - [Technical Specifications](./project-documentation/technical-specs.md)
 - [Architecture](./project-documentation/architecture.md)
-- [Backend Adaptation Summary](./actual-backend/BACKEND_ADAPTATION_SUMMARY.md)
+  
 
 
 
