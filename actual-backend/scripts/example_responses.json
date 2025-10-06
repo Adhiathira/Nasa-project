@@ -1,0 +1,108 @@
+{
+  "description": "Example API responses for serve_adapted.py endpoints",
+  "endpoints": {
+    "search": {
+      "endpoint": "POST /api/search",
+      "request": {
+        "query": "photosynthesis"
+      },
+      "response": [
+        {
+          "paper_id": "7eac174f-505f-510b-ab8c-885579c0c2d7",
+          "metadata": {
+            "title": "Photosynthesis in C4 Plants: Mechanisms and Evolution",
+            "summary": "This paper explores the evolutionary adaptations of C4 photosynthesis and its efficiency advantages in warm climates. The research examines the biochemical pathways, anatomical features, and ecological distribution of C4 plants."
+          },
+          "similarity": 0.92
+        },
+        {
+          "paper_id": "4afde057-19cd-5568-91f2-92a084f42fe6",
+          "metadata": {
+            "title": "Light-Dependent Reactions in Photosynthesis",
+            "summary": "A comprehensive review of the light-dependent reactions occurring in the thylakoid membranes of chloroplasts. The paper discusses electron transport chains, photophosphorylation, and ATP synthesis."
+          },
+          "similarity": 0.87
+        },
+        {
+          "paper_id": "f47ac10b-58cc-4372-a567-0e02b2c3d479",
+          "metadata": {
+            "title": "CAM Photosynthesis: An Adaptation to Arid Environments",
+            "summary": "Analysis of Crassulacean Acid Metabolism as an evolutionary response to water scarcity. The study examines temporal separation of carbon fixation and the ecological advantages in desert ecosystems."
+          },
+          "similarity": 0.73
+        }
+      ]
+    },
+    "search_paper": {
+      "endpoint": "POST /api/search_paper",
+      "request": {
+        "paper_id": "7eac174f-505f-510b-ab8c-885579c0c2d7",
+        "conversation": "We discussed the efficiency of C4 photosynthesis"
+      },
+      "response": [
+        {
+          "paper_id": "6c84fb90-12c4-11e1-840d-7b25c5ee775a",
+          "metadata": {
+            "title": "Rubisco: Structure, Function, and Engineering",
+            "summary": "Detailed examination of ribulose-1,5-bisphosphate carboxylase/oxygenase (Rubisco), the most abundant protein on Earth. The paper explores its role in carbon fixation and efforts to engineer more efficient variants."
+          },
+          "similarity": 0.68
+        },
+        {
+          "paper_id": "e4d909c2-90d1-4f4b-8f5b-0c8e1e3d7b2a",
+          "metadata": {
+            "title": "Photorespiration and Carbon Concentration Mechanisms",
+            "summary": "Investigation of photorespiration in C3 plants and the carbon concentration mechanisms that minimize it in C4 and CAM plants. Includes discussion of ecological and evolutionary implications."
+          },
+          "similarity": 0.65
+        }
+      ]
+    },
+    "chat": {
+      "endpoint": "POST /api/chat",
+      "request": {
+        "paper_id": "7eac174f-505f-510b-ab8c-885579c0c2d7",
+        "message": "What are the key advantages of C4 photosynthesis?",
+        "conversation_history": []
+      },
+      "response": {
+        "response": "Based on this paper, the key advantages of C4 photosynthesis include: 1) Higher efficiency in hot, dry climates due to reduced photorespiration, 2) Better water use efficiency through improved CO2 concentration around Rubisco, 3) Ability to maintain photosynthesis at higher temperatures where C3 plants would suffer from photorespiration losses. The paper specifically highlights how C4 plants can concentrate CO2 in bundle sheath cells, effectively creating a high-CO2 environment that minimizes the oxygenase activity of Rubisco.",
+        "paper_context": {
+          "title": "Photosynthesis in C4 Plants: Mechanisms and Evolution",
+          "relevant_sections": [
+            "Biochemical Pathways",
+            "Evolutionary Advantages",
+            "Ecological Distribution"
+          ]
+        }
+      }
+    },
+    "health": {
+      "endpoint": "GET /health",
+      "request": null,
+      "response": {
+        "status": "ok"
+      }
+    }
+  },
+  "error_responses": {
+    "400_bad_request": {
+      "error": "Invalid request",
+      "message": "Query parameter is required and must be a non-empty string"
+    },
+    "404_not_found": {
+      "error": "Not found",
+      "message": "Paper with specified ID not found"
+    },
+    "500_internal_error": {
+      "error": "Internal server error",
+      "message": "Failed to process search request"
+    }
+  },
+  "notes": {
+    "uuid_generation": "UUIDs are generated deterministically using UUID v5 with namespace 6ba7b810-9dad-11d1-80b4-00c04fd430c8",
+    "similarity_range": "Similarity scores are floats between 0.0 and 1.0, derived from ChromaDB cosine distance (1.0 - distance)",
+    "paper_registry": "Papers are registered in PAPER_REGISTRY on first search/expand and persist until server restart",
+    "session_management": "Sessions are created internally per search request; paper_id is used for all subsequent operations"
+  }
+}

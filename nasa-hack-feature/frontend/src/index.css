@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, Alerta, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #000000;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+/* Cosmic Background Effects */
+.cosmic-background {
+  background: radial-gradient(ellipse at center, #0a0a1a 0%, #000000 70%);
+}
+
+/* Animated Stars */
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.stars-layer {
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, #ffffff, transparent),
+    radial-gradient(2px 2px at 60px 70px, #60a5fa, transparent),
+    radial-gradient(1px 1px at 50px 50px, #ffffff, transparent),
+    radial-gradient(1px 1px at 130px 80px, #8b5cf6, transparent),
+    radial-gradient(2px 2px at 90px 10px, #06b6d4, transparent),
+    radial-gradient(1px 1px at 160px 120px, #ffffff, transparent),
+    radial-gradient(2px 2px at 200px 90px, #60a5fa, transparent),
+    radial-gradient(1px 1px at 250px 40px, #8b5cf6, transparent),
+    radial-gradient(2px 2px at 180px 150px, #06b6d4, transparent),
+    radial-gradient(1px 1px at 100px 180px, #ffffff, transparent);
+  background-size: 300px 200px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px, 0 0, 40px 60px, 130px 270px, 70px 100px, 0 0, 40px 60px;
+  animation: twinkle 3s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+/* Cosmic Orbs with Gradients */
+@keyframes orb-pulse-1 {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.1) translate(10px, -10px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes orb-pulse-2 {
+  0%, 100% {
+    transform: scale(1) translate(0, 0);
+    opacity: 0.25;
+  }
+  50% {
+    transform: scale(1.15) translate(-15px, 15px);
+    opacity: 0.4;
+  }
+}
+
+@keyframes orb-pulse-3 {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 0.35;
+  }
+}
+
+.cosmic-orb-1 {
+  background: radial-gradient(ellipse at center,
+    rgba(59, 130, 246, 0.6) 0%,
+    rgba(139, 92, 246, 0.4) 40%,
+    transparent 70%
+  );
+  animation: orb-pulse-1 8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.cosmic-orb-2 {
+  background: radial-gradient(ellipse at center,
+    rgba(139, 92, 246, 0.6) 0%,
+    rgba(6, 182, 212, 0.4) 40%,
+    transparent 70%
+  );
+  animation: orb-pulse-2 10s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.cosmic-orb-3 {
+  background: radial-gradient(ellipse at center,
+    rgba(6, 182, 212, 0.5) 0%,
+    rgba(59, 130, 246, 0.3) 35%,
+    transparent 65%
+  );
+  animation: orb-pulse-3 12s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Vignette Effect */
+.vignette {
+  background: radial-gradient(ellipse at center,
+    transparent 0%,
+    transparent 60%,
+    rgba(0, 0, 0, 0.4) 80%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+/* Title Glow Effect */
+.title-glow {
+  text-shadow:
+    0 0 10px rgba(59, 130, 246, 0.5),
+    0 0 20px rgba(59, 130, 246, 0.3),
+    0 0 30px rgba(139, 92, 246, 0.2);
+  animation: title-pulse 4s ease-in-out infinite;
+}
+
+@keyframes title-pulse {
+  0%, 100% {
+    text-shadow:
+      0 0 10px rgba(59, 130, 246, 0.5),
+      0 0 20px rgba(59, 130, 246, 0.3),
+      0 0 30px rgba(139, 92, 246, 0.2);
+  }
+  50% {
+    text-shadow:
+      0 0 15px rgba(59, 130, 246, 0.7),
+      0 0 30px rgba(59, 130, 246, 0.5),
+      0 0 45px rgba(139, 92, 246, 0.3);
+  }
+}
