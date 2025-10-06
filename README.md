@@ -14,6 +14,7 @@ We believe humans and machines should work together in the future. Currently, we
 While this collaborative approach may be challenging to implement for the general population, **researchers represent an ideal subset of users** who possess the domain knowledge to meaningfully augment LLMs. They can guide the exploration, make informed decisions about relevance, and connect insights that AI might miss.
 
 **That's why we're building a context-aware search engine** where researchers maintain control of their discovery process. By visualizing relationships between papers in 3D space, researchers can:
+
 - **Choose their own path** through the research landscape
 - **Understand connections** between different papers visually
 - **Leverage AI assistance** for summaries and insights without losing agency
@@ -25,14 +26,9 @@ This isn't just search — it's **collaborative knowledge discovery**.
 
 **Watch the full product demonstration:**
 
-https://github.com/user-attachments/assets/your-video-id-here
 
-> **Note**: To enable video playback, upload the video file from `./videos/Screen Recording 2025-10-05 at 11.35.16 PM.mov`:
-> 1. Create a new GitHub issue or edit this README on GitHub
-> 2. Drag and drop the video file into the comment/edit box
-> 3. GitHub will upload it and generate a URL like `https://github.com/user-attachments/assets/...`
-> 4. Copy that URL and replace the placeholder above
-> 5. The video will then play inline in the README
+https://github.com/user-attachments/assets/eafe1e7b-f74e-4d6e-a591-f29dd271fe60
+
 
 ## 🚀 Features
 
